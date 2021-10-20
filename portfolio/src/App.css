@@ -1,38 +1,39 @@
+:root {
+  --primeColor: #3de8eb;
+  --thirdColor: #60f634;
+  --secondColor: #4f34f6;
+  --myGradient: linear-gradient(
+    /* to bottom left, */ to left,
+    var(--secondColor),
+    var(--primeColor),
+    var(--thirdColor)
+  );
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#titleTextContainer {
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#landingTextData {
+  background: var(--myGradient);
+  font-size: 50px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 300%;
+  background-position: right;
+  /* animation: colorShift 15s infinite alternate; */
+}
+
+@keyframes colorShift {
+  0% {
+    background-position: right;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    background-position: left;
   }
 }
