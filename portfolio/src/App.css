@@ -37,3 +37,27 @@
     background-position: left;
   }
 }
+
+.circle {
+  animation: circleMove 10s infinite alternate;
+  filter: blur(3px);
+  transition: all 500ms;
+}
+
+.circle:hover {
+  filter: blur(0px);
+  fill: red;
+  transition: all 700ms;
+}
+
+@keyframes squareMove {
+  0% {
+    transform: translate(0px, 0);
+    fill: black;
+  }
+
+  100% {
+    transform: translate(200px, 0);
+    fill: green;
+  }
+}
