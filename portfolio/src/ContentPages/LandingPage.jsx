@@ -1,11 +1,7 @@
 import * as d3 from "d3";
-import { useEffect, useState } from "react";
-import { useSprings, useSpring, animated, to } from "react-spring";
+import { useSprings, animated } from "react-spring";
 
 export const LandingPage = () => {
-  const [mousePoz, setMousePoz] = useState({ x: 0, y: 0 });
-  const [time, setTime] = useState(Date.now());
-
   const hunnit = d3.range(20);
 
   const svgWidth = 2000;
@@ -83,7 +79,6 @@ export const LandingPage = () => {
         r="40"
         cx={Math.random() * svgWidth}
         cy={Math.random() * svgHeight}
-        // fill="grey"
         fill="hsla(335, 0%, 54%, 0.85)"
         key={`circ${Math.random() * 1000}`}
         className={selectRandomClassName()}
@@ -123,36 +118,3 @@ export const LandingPage = () => {
 };
 
 export default LandingPage;
-
-// useEffect(() => {
-//   drawSquare();
-// }, []);
-
-// useEffect(() => {
-//   moveDot();
-// }, [mousePoz]);
-
-// const svgSelection = d3.select("#landingBackground");
-// const fullWidth = 400;
-// const fullHeight = 400;
-// const marginSides = 20;
-// const marginTop = 20;
-// const marginBetweenGraphs = 200;
-
-// function drawSquare() {
-//   d3.select("#landingBackground")
-//     .selectAll(".square")
-//     .data([1])
-//     .enter()
-//     .append("rect")
-//     .attr("x", 100)
-//     .attr("y", 100)
-//     .attr("width", 100)
-//     .attr("height", 100)
-//     .attr("fill", "grey")
-//     .attr("class", "square")
-//     .transition()
-//     .duration(2000)
-//     .attr("transform", "translate(0,0) rotate(30)");
-//   // .transform("translate(0,0) rotate(180)");
-// }
