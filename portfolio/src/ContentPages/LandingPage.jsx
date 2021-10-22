@@ -6,7 +6,7 @@ export const LandingPage = () => {
   const [mousePoz, setMousePoz] = useState({ x: 0, y: 0 });
   const [time, setTime] = useState(Date.now());
 
-  const hunnit = d3.range(15);
+  const hunnit = d3.range(20);
 
   const svgWidth = 2000;
   const svgHeight = 900;
@@ -83,7 +83,8 @@ export const LandingPage = () => {
         r="40"
         cx={Math.random() * svgWidth}
         cy={Math.random() * svgHeight}
-        fill="grey"
+        // fill="grey"
+        fill="hsla(335, 0%, 54%, 0.85)"
         key={`circ${Math.random() * 1000}`}
         className={selectRandomClassName()}
         style={el}
