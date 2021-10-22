@@ -12,9 +12,34 @@
 
 .App {
   text-align: center;
+  align-items: center;
+}
+
+#landingPageContainer {
+  width: 100vw;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* background-color: teal; */
+}
+
+.child {
+  height: 100px;
+  width: 100px;
+}
+
+#svgContainer {
+  /* background-color: green; */
+  width: 100vw;
+  height: 100vh;
+  /* margin-top: -50%; */
 }
 
 #titleTextContainer {
+  margin-top: -35%;
+  z-index: 1;
 }
 
 #landingTextData {
@@ -25,7 +50,7 @@
   color: transparent;
   background-size: 300%;
   background-position: right;
-  /* animation: colorShift 15s infinite alternate; */
+  animation: colorShift 15s infinite alternate;
 }
 
 @keyframes colorShift {
@@ -44,9 +69,22 @@
   transition: all 500ms;
 }
 
-.circle:hover {
+.circle_primary:hover {
   filter: blur(0px);
-  fill: red;
+  fill: var(--primeColor);
+  transition: all 700ms;
+}
+
+.circle_secondary:hover {
+  filter: blur(0px);
+  fill: var(--secondColor);
+  transition: all 700ms;
+}
+
+.circle_third:hover {
+  filter: blur(0px);
+  /* fill: var(--thirdColor); */
+  fill: var(--thirdColor);
   transition: all 700ms;
 }
 
