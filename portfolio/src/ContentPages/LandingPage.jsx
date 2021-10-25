@@ -95,7 +95,7 @@ export const LandingPage = () => {
   return (
     <div id="landingPageContainer">
       <div id="svgContainer">
-        <svg
+        {/* <svg
           id="landingBackground"
           // width={`${svgWidth}px`}
           // height={`${svgHeight}px`}
@@ -104,7 +104,7 @@ export const LandingPage = () => {
           fill="green"
         >
           {circles}
-        </svg>
+        </svg> */}
       </div>
       <div id="titleTextContainer">
         <h1 id="landingTextName">Matt is my Name</h1>
