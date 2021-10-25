@@ -1,5 +1,10 @@
 export const Skills = () => {
-  return <div>Skills page </div>;
+  return (
+    <div id="skillsSection">
+      Skills page
+      <div style={{ height: "500px", backgroundColor: "grey" }}></div>
+    </div>
+  );
 };
 
 export default Skills;

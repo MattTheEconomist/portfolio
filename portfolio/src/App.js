@@ -5,31 +5,15 @@ import AboutMe from "./ContentPages/AboutMe";
 import Portfolio from "./ContentPages/Portfolio";
 import Skills from "./ContentPages/Skills";
 
-import { Route, Switch, BrowserRouter } from "react-router-dom";
-
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" redner={() => LandingPage} />
-        <Route
-          exact
-          path="/portfolio"
-          // render={() => Portfolio}
-          component={Portfolio}
-        />
-        <Route exact path="/skills" component={Skills} />
-        <Route exact path="/aboutme" component={AboutMe} />
-      </Switch>
-
-      <div className="App">
-        <Header />
-        <LandingPage />
-        <Portfolio />
-        <AboutMe />
-        <Skills />
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Header />
+      <LandingPage />
+      <Portfolio />
+      <Skills />
+      <AboutMe />
+    </div>
   );
 }
 

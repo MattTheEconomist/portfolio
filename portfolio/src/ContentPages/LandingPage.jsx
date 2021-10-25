@@ -79,7 +79,7 @@ export const LandingPage = () => {
         r="40"
         cx={Math.random() * svgWidth}
         cy={Math.random() * svgHeight}
-        fill="hsla(335, 0%, 54%, 0.85)"
+        fill="hsla(335, 0%, 54%, 0.25)"
         key={`circ${Math.random() * 1000}`}
         className={selectRandomClassName()}
         style={el}

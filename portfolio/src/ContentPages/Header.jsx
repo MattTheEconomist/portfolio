@@ -3,35 +3,33 @@ import AboutMe from "./AboutMe";
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
 
-import { Route, Switch, BrowserRouter, Link } from "react-router-dom";
+// import { Route, Switch, BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 export const Header = () => {
   return (
     <>
-      <Switch>
-        <Route exact path="/" redner={() => LandingPage} />
-        <Route
-          exact
-          path="/portfolio"
-          // render={() => Portfolio}
-          component={Portfolio}
-        />
-        <Route exact path="/skills" component={Skills} />
-        <Route exact path="/aboutme" component={AboutMe} />
-      </Switch>
-
       <div id="headerContainer">
         <div className="headerLink" id="headerLinkHome">
-          Home
+          <Link to="landingPageContainer" spy={true} smooth={true}>
+            Home
+          </Link>
         </div>
-        <Link className="headerLink" id="headerLinkPortfolio" to="/portfolio">
-          Portfolio
-        </Link>
+
+        <div className="headerLink" id="headerLinkPortfolio">
+          <Link to="portfolioSection" spy={true} smooth={true}>
+            Portfolio
+          </Link>
+        </div>
         <div className="headerLink" id="headerLinkSkills">
-          Skills
+          <Link to="skillsSection" spy={true} smooth={true}>
+            Skills
+          </Link>
         </div>
         <div className="headerLink" id="headerLinkAboutMe">
-          About Me
+          <Link to="aboutMeSection" spy={true} smooth={true}>
+            About Me
+          </Link>
         </div>
         <div className="headerLink" id="headerLinkContact">
           Contact
