@@ -107,11 +107,12 @@ export const LandingPage = () => {
         </svg> */}
       </div>
       <div id="titleTextContainer">
-        <h1 id="landingTextName">Matt is my Name</h1>
+        <h1 id="landingTextName">Matt Ashford</h1>
         <h1 id="landingTextOuter">
           {" "}
-          <span id="landingTextData">Data Viz</span> is my game
+          <span id="landingTextData">Data Analyst</span>
         </h1>
+        <h3>Finding hidden patterns in data</h3>
       </div>
     </div>
   );

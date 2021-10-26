@@ -2,12 +2,19 @@
   --primeColor: #3de8eb;
   --thirdColor: #60f634;
   --secondColor: #4f34f6;
+  --forthColor: #348cf6;
   --myGradient: linear-gradient(
     /* to bottom left, */ to left,
     var(--secondColor),
     var(--primeColor),
     var(--thirdColor)
   );
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@200;500&family=Oxygen:wght@300&display=swap");
+
+body {
+  font-family: "Exo", sans-serif;
 }
 
 .App {
@@ -100,20 +107,63 @@
 }
 
 #headerContainer {
-  background-color: white;
+  background-color: var(--primeColor);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  gap: 2em;
+  gap: 0.2em;
   position: fixed;
   top: 0;
   width: 100%;
   transition: 0.2s;
+  /* padding-bottom: 0.5em; */
+  height: 3em;
 }
 
 .headerLink {
-  background-color: tomato;
   font-size: 20px;
   margin-right: 2em;
   padding: 0.5%;
+  cursor: pointer;
+  font-family: "Oxygen", sans-serif;
+}
+
+.headerLink:hover {
+  border-bottom: 5px solid black;
+}
+
+#skillsSection {
+}
+
+#skillCardsContainer {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.skillCard {
+  max-width: 30vw;
+}
+.skillIconContainer {
+}
+
+.skillTitle {
+  margin-top: 5%;
+  font-size: 2.2em;
+}
+
+.skillList {
+  display: inline-block;
+  text-align: left;
+}
+
+.skillListItem {
+  font-size: 1.1em;
+  margin-top: 1%;
+}
+
+.sectionTitle {
+  font-size: 3em;
 }
