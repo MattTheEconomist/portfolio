@@ -3,6 +3,7 @@
   --thirdColor: #60f634;
   --secondColor: #4f34f6;
   --forthColor: #348cf6;
+
   --myGradient: linear-gradient(
     /* to bottom left, */ to left,
     var(--secondColor),
@@ -166,4 +167,92 @@ body {
 
 .sectionTitle {
   font-size: 3em;
+}
+
+#aboutMeSection {
+  min-height: 600px;
+  background-color: rgba(0, 191, 255, 0.35);
+  text-align: center;
+}
+
+#aboutMeText {
+  max-width: 100vw;
+  display: inline-block;
+}
+
+.aboutMePara {
+  font-size: 1.1em;
+  display: table-cell;
+  /* text-align: left; */
+}
+
+#aboutMeMatt {
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  height: 300px;
+  table-layout: fixed;
+  border-spacing: 10px;
+  gap: 3em;
+  /* background-color: hsla(202, 100%, 71%, 1); */
+}
+#imgContainerMatt {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 250px;
+  max-height: 250px;
+  display: table-cell;
+}
+
+#paraMattContainer {
+  /* background-color: tomato; */
+  display: table-cell;
+  height: 250px;
+}
+
+#mattImg {
+  width: 100%;
+  height: 100%;
+}
+#imgContainerCat {
+  /* width: 150px;
+  height: 200px; */
+}
+
+#catImg {
+  width: 20%;
+  height: 20%;
+}
+
+#contactSection {
+  text-align: center;
+  /* background-color: var(--forthColor); */
+}
+
+#catText {
+  margin-bottom: 30px;
+}
+
+#catTextContainer {
+  margin-top: 2em;
+}
+
+#allFooterIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+}
+
+.footerIconContainer {
+  padding: 10px;
+}
+
+.footerIconContainer:hover {
+  background-color: var(--primeColor);
+  transform: scale(1.1);
+  transition: all 1s;
+}
+.footerIconLink {
+  color: black;
 }

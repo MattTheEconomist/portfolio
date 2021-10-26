@@ -4,6 +4,7 @@ import Header from "./ContentPages/Header";
 import AboutMe from "./ContentPages/AboutMe";
 import Portfolio from "./ContentPages/Portfolio";
 import Skills from "./ContentPages/Skills";
+import Footer from "./ContentPages/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Portfolio />
       <Skills />
       <AboutMe />
+      <Footer />
     </div>
   );
 }

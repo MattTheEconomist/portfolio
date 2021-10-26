@@ -32,7 +32,9 @@ export const Header = () => {
           </Link>
         </div>
         <div className="headerLink" id="headerLinkContact">
-          Contact
+          <Link to="contactSection" spy={true} smooth={true}>
+            Contact
+          </Link>
         </div>
       </div>
     </>
