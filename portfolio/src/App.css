@@ -3,6 +3,8 @@
   --thirdColor: #60f634;
   --secondColor: #4f34f6;
   --forthColor: #348cf6;
+  --projectImgWidth: 225px;
+  --projectImgHeight: 225px;
 
   --myGradient: linear-gradient(
     /* to bottom left, */ to left,
@@ -131,6 +133,57 @@ body {
 
 .headerLink:hover {
   border-bottom: 5px solid black;
+}
+
+/* portfolio section  */
+
+#portfolioSection {
+  height: 700px;
+  background-color: dodgerblue;
+}
+
+#portfolioRowsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: purple; */
+  width: 100vw;
+}
+
+#projectsRowJs {
+  /* background-color: red; */
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.rowName {
+  font-size: 1.5em;
+}
+
+#projectsRowPython {
+  /* background-color: green; */
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.imgContainerProject {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 250px;
+  max-height: 250px;
+  display: table-cell;
+}
+
+.projectImg {
+  /* width: 100%; */
+  width: var(--projectImgWidth);
+  height: var(--projectImgHeight);
+  /* height: 100%; */
 }
 
 #skillsSection {
