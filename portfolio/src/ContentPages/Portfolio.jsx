@@ -11,15 +11,29 @@ export const Portfolio = () => {
       <div id="portfolioRowsContainer">
         <div className="rowName">Web Applications </div>
         <div id="projectsRowJs">
-          <ProjectCell imgFile={elec} />
-          <ProjectCell imgFile={service} />
-          <ProjectCell imgFile={euro} />
+          <ProjectCell
+            imgFile={elec}
+            text={projecTextObj.filter((row) => row.projId === "Infographic")}
+          />
+          <ProjectCell
+            imgFile={service}
+            text={projecTextObj.filter((row) => row.projId === "Dashboard")}
+          />
+          <ProjectCell
+            imgFile={euro}
+            text={projecTextObj.filter((row) => row.projId === "Map")}
+          />
         </div>
         <div className="rowName">Jupyter Notebooks </div>
         <div id="projectsRowPython">
-          <ProjectCell imgFile={housing} />
-          <ProjectCell imgFile={housing} />
-          {/* <ProjectCell imgFile={hostile} /> */}
+          <ProjectCell
+            imgFile={housing}
+            text={projecTextObj.filter((row) => row.projId === "Housing")}
+          />
+          <ProjectCell
+            imgFile={housing}
+            text={projecTextObj.filter((row) => row.projId === "Web Scraping")}
+          />
         </div>
       </div>
     </div>
@@ -29,11 +43,69 @@ export const Portfolio = () => {
 export default Portfolio;
 
 const ProjectCell = (props) => {
-  const { imgFile } = props;
+  const { imgFile, text } = props;
+
+  const linkAddress = text ? text[0].info.linkAddress : "";
 
   return (
-    <div className="imgContainerProject ">
-      <img src={imgFile} className="projectImg"></img>
-    </div>
+    <a href={linkAddress}>
+      <div className="imgContainerProject">
+        <img src={imgFile} className="projectImg"></img>
+        <div className="hiddenProjectBox">
+          <p> {text && text[0].info.projectTitle} </p>
+          <br />
+          <p> {text && text[0].info.projText}</p>
+        </div>
+      </div>
+    </a>
   );
 };
+
+const projecTextObj = [
+  {
+    projId: "Dashboard",
+    info: {
+      linkAddress: "https://matttheeconomist.github.io/dash-deploy/",
+      projectTitle: "Dashboard",
+      projText:
+        "Dashboard showing USPS service performance. Currently used by the Postal Regulatory Commission!",
+    },
+  },
+  {
+    projId: "Infographic",
+    info: {
+      linkAddress:
+        "https://matttheeconomist.github.io/electricity-force-deploy/",
+      projectTitle: "Infographic",
+      projText: "Interactive viz showing US energy production ",
+    },
+  },
+  {
+    projId: "Map",
+    info: {
+      linkAddress: "https://matttheeconomist.github.io/dash-deploy/",
+      projectTitle: "Map",
+      projText:
+        "Interactive map showing international trade in the European Union ",
+    },
+  },
+  {
+    projId: "Housing",
+    info: {
+      linkAddress:
+        "https://nbviewer.org/github/MattTheEconomist/Machine_Learning_Housing_Prices/blob/main/Analysis.ipynb",
+      projectTitle: "Machine Learning",
+      projText:
+        "Analysis using machine learning to predict housing prices in Melbourne",
+    },
+  },
+  {
+    projId: "Web Scraping",
+    info: {
+      linkAddress:
+        "https://nbviewer.org/github/MattTheEconomist/Machine_Learning_Housing_Prices/blob/main/Analysis.ipynb",
+      projectTitle: "Web Scraping",
+      projText: "Web Scraping X to find Y",
+    },
+  },
+];
