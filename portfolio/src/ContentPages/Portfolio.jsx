@@ -2,12 +2,13 @@ import elec from "../Design/electricityImg.PNG";
 import service from "../Design/serviceDash2.PNG";
 import euro from "../Design/euroMap.PNG";
 import housing from "../Design/housing.PNG";
-// import hostile from "../Design/hostile.PNG";
+import webScrape from "../Design/webScrape.PNG";
 
 export const Portfolio = () => {
   return (
     <div id="portfolioSection">
       <h1 className="sectionTitle">Portfolio</h1>
+      <p id="projectsLive">all projects are live</p>
       <div id="portfolioRowsContainer">
         <div className="rowName">Web Applications </div>
         <div id="projectsRowJs">
@@ -31,7 +32,7 @@ export const Portfolio = () => {
             text={projecTextObj.filter((row) => row.projId === "Housing")}
           />
           <ProjectCell
-            imgFile={housing}
+            imgFile={webScrape}
             text={projecTextObj.filter((row) => row.projId === "Web Scraping")}
           />
         </div>
@@ -52,7 +53,7 @@ const ProjectCell = (props) => {
       <div className="imgContainerProject">
         <img src={imgFile} className="projectImg"></img>
         <div className="hiddenProjectBox">
-          <p> {text && text[0].info.projectTitle} </p>
+          <p className="projectTitle"> {text && text[0].info.projectTitle} </p>
           <br />
           <p> {text && text[0].info.projText}</p>
         </div>
@@ -103,9 +104,9 @@ const projecTextObj = [
     projId: "Web Scraping",
     info: {
       linkAddress:
-        "https://nbviewer.org/github/MattTheEconomist/Machine_Learning_Housing_Prices/blob/main/Analysis.ipynb",
+        "https://nbviewer.org/github/MattTheEconomist/webscrape2/blob/main/Web%20Scraping%20Financial%20Data%202.ipynb",
       projectTitle: "Web Scraping",
-      projText: "Web Scraping X to find Y",
+      projText: "Web Scraping Yahoo Finance to analyze stock information",
     },
   },
 ];
