@@ -32,7 +32,7 @@ export const AboutMe = () => {
           </div>
         </div>
         <div id="imgContainerCat">
-          <img src={catImg} className="projectImg"></img>
+          <img src={catImg} id="catImg"></img>
         </div>
       </div>
     </div>

@@ -3,9 +3,10 @@
   --thirdColor: #60f634;
   --secondColor: #4f34f6;
   --forthColor: #348cf6;
+  --alternateGreen: #2ca5d4;
   --projectImgWidth: 225px;
   --projectImgHeight: 225px;
-  --catImgWidth: 100px;
+  --catImgWidth: 200px;
   --catImgHeight: 200px;
 
   --myGradient: linear-gradient(
@@ -14,6 +15,8 @@
     var(--primeColor),
     var(--thirdColor)
   );
+
+  --sectionPaddingTop: 1%;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Exo:wght@200;500&family=Oxygen:wght@300&display=swap");
@@ -113,6 +116,7 @@ body {
 
 #headerContainer {
   background-color: var(--primeColor);
+  opacity: 0.9;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -136,13 +140,17 @@ body {
 
 .headerLink:hover {
   border-bottom: 5px solid black;
+  font-weight: bold;
+  /* transition: all 500ms; */
+  transition: border-bottom 300ms;
 }
 
 /* portfolio section  */
 
 #portfolioSection {
-  background-color: dodgerblue;
+  background-color: var(--forthColor);
   padding-bottom: 5%;
+  padding-top: var(--sectionPaddingTop);
 }
 
 #projectsLive {
@@ -248,6 +256,8 @@ img {
 /* SKILLS SECTION  */
 
 #skillsSection {
+  padding-top: var(--sectionPaddingTop);
+  padding-bottom: 3%;
 }
 
 #skillCardsContainer {
@@ -286,7 +296,8 @@ img {
 
 #aboutMeSection {
   /* min-height: 600px; */
-  background-color: rgba(0, 191, 255, 0.35);
+  padding-top: var(--sectionPaddingTop);
+  background-color: var(--alternateGreen);
   text-align: center;
 }
 
@@ -354,6 +365,7 @@ img {
 
 #contactSection {
   text-align: center;
+  padding-top: var(--sectionPaddingTop);
   /* background-color: var(--forthColor); */
 }
 
