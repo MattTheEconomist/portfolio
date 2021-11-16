@@ -84,7 +84,7 @@ const projecTextObj = [
   {
     projId: "Map",
     info: {
-      linkAddress: "https://matttheeconomist.github.io/dash-deploy/",
+      linkAddress: "https://matttheeconomist.github.io/euro-map-deploy/",
       projectTitle: "Map",
       projText:
         "Interactive map showing international trade in the European Union ",
