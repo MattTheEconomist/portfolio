@@ -259,7 +259,8 @@ img {
 
 #skillsSection {
   padding-top: var(--sectionPaddingTop);
-  padding-bottom: 3%;
+  padding-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 #skillCardsContainer {
@@ -298,7 +299,7 @@ img {
 
 #aboutMeSection {
   position: relative;
-
+  /* background-image: url("Design/gheryTwo.jpg"); */
   background-size: cover;
   padding-top: var(--sectionPaddingTop);
   text-align: center;
@@ -314,6 +315,8 @@ img {
   width: 100%;
   height: 100%;
   background-image: url("Design/gheryTwo.jpg");
+  background-attachment: fixed;
+  z-index: -1;
   filter: grayscale(100%);
 }
 #aboutMeSection-inside {
