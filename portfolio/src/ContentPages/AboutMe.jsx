@@ -14,25 +14,25 @@ export const AboutMe = () => {
             </div>
           </div>
           <div id="paraMattContainer">
+            <p id="aboutMeIntro"> Hi I’m Matt, </p>
             <p className="aboutMePara">
               {" "}
-              Hi I’m Matt. I have a Master’s in applied economics from the
-              University of Maryland and I love working with data. Every new
-              data set has trends and patterns hiding within it waiting to be
-              discovered. I like to be creative in my exploration, finding
-              trends and patterns that others may miss. Once the patterns are
-              discovered, the right visualization can truly make an impact.
+              I have a Master’s in applied economics from the University of
+              Maryland and I love working with data. Every new data set has
+              trends and patterns hiding within it waiting to be discovered. I
+              like to be creative in my exploration, finding trends and patterns
+              that others may miss. Once the patterns are discovered, the right
+              visualization can truly make an impact.
               <br></br>
               <br></br>I currently work as an economist at the Postal Regulatory
               Comission. Here analyze data on costs and prices of Marketing Mail
-              (more affectionately known as "junk mail"). When I'm not hammering
-              away at the keyboard, I'm probably hanging out with my cat Leroy.
-              He likes to advertise his belly.
+              (more affectionately known as "junk mail"). I also created a
+              dashboard to visualize service performance for most USPS products.
             </p>
           </div>
         </div>
         <div id="imgContainerCat">
-          <img src={catImg} id="catImg"></img>
+          {/* <img src={catImg} id="catImg"></img> */}
         </div>
       </div>
     </div>

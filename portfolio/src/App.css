@@ -2,8 +2,10 @@
   --primeColor: #3de8eb;
   --thirdColor: #60f634;
   --secondColor: #4f34f6;
-  --forthColor: #348cf6;
-  --alternateGreen: #2ca5d4;
+  --forthColor: #228385;
+  --alternateGreen: #6dc2c3;
+  --lightGrey: hsla(131, 0%, 80%, 1);
+  /* --lightGrey: #3c6a6b; */
   --projectImgWidth: 225px;
   --projectImgHeight: 225px;
   --catImgWidth: 200px;
@@ -295,10 +297,33 @@ img {
 }
 
 #aboutMeSection {
-  /* min-height: 600px; */
+  position: relative;
+
+  background-size: cover;
   padding-top: var(--sectionPaddingTop);
-  background-color: var(--alternateGreen);
   text-align: center;
+  min-height: 500px;
+  max-height: 700px;
+}
+
+#aboutMeSection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("Design/gheryTwo.jpg");
+  filter: grayscale(100%);
+}
+#aboutMeSection-inside {
+  /* This will make it stack on top of the ::before */
+  position: relative;
+}
+
+#aboutMeIntro {
+  font-size: 25px;
+  text-align: left;
 }
 
 #aboutMeText {
@@ -308,25 +333,25 @@ img {
 
 .aboutMePara {
   font-size: 1.1em;
-  display: table-cell;
-  /* text-align: left; */
+  /* display: table-cell; */
+  text-align: left;
 }
 
 #aboutMeMatt {
   display: flex;
   flex-direction: row;
-  width: 50vw;
-  /* height: 300px; */
-  table-layout: fixed;
+  width: 75vw;
   border-spacing: 10px;
   gap: 3em;
-  /* background-color: hsla(202, 100%, 71%, 1); */
+  padding: 2em;
+  background-color: hsla(181, 42%, 60%, 0.83);
 }
 #imgContainerMatt {
-  min-width: 250px;
-  max-width: 250px;
-  min-height: 250px;
-  max-height: 250px;
+  margin-top: -10px;
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  max-height: 200px;
   display: table-cell;
 }
 
@@ -337,7 +362,7 @@ img {
   max-height: var(--catImgHeight);
   margin-left: 55%;
   margin-top: 5%;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
 }
 
 #catImg {
@@ -352,6 +377,7 @@ img {
 #paraMattContainer {
   /* background-color: tomato; */
   display: table-cell;
+  width: 900px;
   /* min-width: 600px;
   max-width: 600px;
   min-height: 800px;

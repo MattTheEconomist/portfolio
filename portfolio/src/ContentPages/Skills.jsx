@@ -1,11 +1,18 @@
+// import scrape from "../Design/scrape-icon.svg";
+import { ReactComponent as Scrape } from "../Design/scrape-icon.svg";
+import { ReactComponent as Eda } from "../Design/eda-icon.svg";
+import { ReactComponent as Viz } from "../Design/viz-icon.svg";
+
 export const Skills = () => {
   return (
-    <div id="skillsSection" style={{ height: "500px" }}>
+    <div id="skillsSection">
       <h1 className="sectionTitle">Skills</h1>
 
       <div id="skillCardsContainer">
         <div className="skillCard">
-          <div className="skillIconContainer">skill icon</div>
+          <div className="skillIconContainer">
+            <Scrape />
+          </div>
           <h3 className="skillTitle">Data Management</h3>
           <ul className="skillList">
             <li className="skillListItem">
@@ -22,7 +29,9 @@ export const Skills = () => {
           </ul>
         </div>
         <div className="skillCard">
-          <div className="skillIconContainer">skill icon</div>
+          <div className="skillIconContainer">
+            <Eda />
+          </div>
           <h3 className="skillTitle">Data Exploration</h3>
           <ul className="skillList">
             <li className="skillListItem">
@@ -37,7 +46,9 @@ export const Skills = () => {
           </ul>
         </div>
         <div className="skillCard">
-          <div className="skillIconContainer">skill icon</div>
+          <div className="skillIconContainer">
+            <Viz />
+          </div>
           <h3 className="skillTitle">Data Viz</h3>
           <ul className="skillList">
             <li className="skillListItem">

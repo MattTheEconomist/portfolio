@@ -49,7 +49,7 @@ const ProjectCell = (props) => {
   const linkAddress = text ? text[0].info.linkAddress : "";
 
   return (
-    <a href={linkAddress}>
+    <a href={linkAddress} target="_blank">
       <div className="imgContainerProject">
         <img src={imgFile} className="projectImg"></img>
         <div className="hiddenProjectBox">
