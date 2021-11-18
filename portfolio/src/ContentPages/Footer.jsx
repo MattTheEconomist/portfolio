@@ -5,12 +5,18 @@ import { SiGmail } from "react-icons/si";
 export const Footer = () => {
   return (
     <div id="contactSection">
-      <h1 className="sectionTitle">Contact</h1>
+      <h1 className="sectionTitle" id="contactTitle">
+        Contact
+      </h1>
       <p>Let's build something great together! </p>
       <p>Please don't hesitate to contact me with project ideas</p>
       <p>
         Feel free to checkout my{" "}
-        <a href="https://github.com/MattTheEconomist" className="textLink">
+        <a
+          href="https://github.com/MattTheEconomist"
+          target="_blank"
+          className="textLink"
+        >
           Github{" "}
         </a>{" "}
         or send me an email at{" "}
@@ -24,6 +30,7 @@ export const Footer = () => {
           <a
             href="https://github.com/MattTheEconomist"
             className="footerIconLink"
+            target="_blank"
           >
             <div className="footerIconContainer">
               <GoMarkGithub />

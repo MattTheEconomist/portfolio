@@ -7,7 +7,9 @@ import webScrape from "../Design/webScrape.PNG";
 export const Portfolio = () => {
   return (
     <div id="portfolioSection">
-      <h1 className="sectionTitle">Portfolio</h1>
+      <h1 className="sectionTitle" id="portfolioTitle">
+        Portfolio
+      </h1>
       <p id="projectsLive">all projects are live</p>
       <div id="portfolioRowsContainer">
         <div className="rowName">Web Applications </div>

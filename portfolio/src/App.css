@@ -1,18 +1,18 @@
 :root {
-  --primeColor: #3de8eb;
-  --thirdColor: #60f634;
-  --secondColor: #4f34f6;
-  --forthColor: #228385;
-  --alternateGreen: #6dc2c3;
-  --lightGrey: hsla(131, 0%, 80%, 1);
-  /* --lightGrey: #3c6a6b; */
-  --projectImgWidth: 225px;
-  --projectImgHeight: 225px;
+  --circlePrime: #53d8eb;
+  --circleSecond: #4a84f6;
+  --circleThird: #4af6ad;
+  --primeColor: #53d8eb;
+  --secondColor: #4a84f6;
+  --thirdColor: #3f99d4;
+  --lightGrey: rgb(228, 227, 227);
+  --projectImgWidth: 270px;
+  --projectImgHeight: 270px;
   --catImgWidth: 200px;
   --catImgHeight: 200px;
 
   --myGradient: linear-gradient(
-    /* to bottom left, */ to left,
+    to left,
     var(--secondColor),
     var(--primeColor),
     var(--thirdColor)
@@ -34,7 +34,7 @@ body {
 
 #landingPageContainer {
   width: 100vw;
-  height: 900px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -52,21 +52,18 @@ body {
 }
 
 #titleTextContainer {
-  margin-top: -35%;
+  margin-top: -65vh;
   z-index: 1;
   background-color: white;
   padding: 1%;
-  border: 1px solid grey;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
-    0 4px 4px rgba(0, 0, 0, 0.11), 0 6px 8px rgba(0, 0, 0, 0.11),
-    0 8px 16px rgba(0, 0, 0, 0.11);
+  border: 2px solid var(--lightGrey);
+  border-radius: 20px;
   transition: all 1s;
 }
 
 #titleTextContainer:hover {
   box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
-    0 8px 4px rgba(0, 0, 0, 0.09), 0 16px 8px rgba(0, 0, 0, 0.09),
-    0 32px 16px rgba(0, 0, 0, 0.09);
+    4px 8px 4px rgba(0, 0, 0, 0.09);
   transform: scale(1.05);
   transition: all 900ms;
 }
@@ -79,7 +76,7 @@ body {
   color: transparent;
   background-size: 300%;
   background-position: right;
-  animation: colorShift 10s infinite alternate;
+  animation: colorShift 5s infinite alternate;
 }
 
 @keyframes colorShift {
@@ -100,24 +97,26 @@ body {
 
 .circle_primary:hover {
   filter: blur(0px);
-  fill: var(--primeColor);
+  fill: var(--circlePrime);
   transition: all 700ms;
 }
 
 .circle_secondary:hover {
   filter: blur(0px);
-  fill: var(--secondColor);
+  fill: var(--circleSecond);
   transition: all 700ms;
 }
 
 .circle_third:hover {
   filter: blur(0px);
-  fill: var(--thirdColor);
+  fill: var(--circleThird);
   transition: all 700ms;
 }
 
 #headerContainer {
-  background-color: var(--primeColor);
+  /* background-color: var(--primeColor); */
+  background-color: white;
+  border: 1px solid var(--primeColor);
   opacity: 0.9;
   display: flex;
   flex-direction: row;
@@ -150,9 +149,14 @@ body {
 /* portfolio section  */
 
 #portfolioSection {
-  background-color: var(--forthColor);
+  background-color: var(--lightGrey);
   padding-bottom: 5%;
   padding-top: var(--sectionPaddingTop);
+  /* filter: blur(5px); */
+}
+
+#portfolioTitle {
+  margin-top: 1.5%;
 }
 
 #projectsLive {
@@ -183,7 +187,7 @@ body {
 
 .rowName {
   font-size: 1.5em;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 /* .rowName:last-child {
@@ -207,6 +211,7 @@ body {
   display: inline-block;
   margin: 10px;
   transition: all 500ms;
+  border-radius: 20px;
 }
 
 .imgContainerProject:hover {
@@ -222,6 +227,7 @@ body {
   display: inline-block;
   margin: 10px;
   vertical-align: top;
+  border-radius: 20px;
 }
 
 .hiddenProjectBox {
@@ -231,6 +237,7 @@ body {
   max-width: var(--projectImgWidth);
   min-height: var(--projectImgHeight);
   max-height: var(--projectImgHeight);
+  border-radius: 20px;
   /* background-color: rgba(0, 0, 0, 0.85); */
 }
 
@@ -246,9 +253,12 @@ body {
   box-sizing: border-box;
   text-align: center;
   color: white;
-  font-size: 13px;
-  background-color: rgba(0, 0, 0, 0.85);
+  font-size: 17px;
+  background-color: var(--secondColor);
+  opacity: 0.9;
   border: 4px solid white;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09), 0 4px 2px rgba(0, 0, 0, 0.09),
+    4px 8px 4px rgba(0, 0, 0, 0.09);
 }
 
 img {
@@ -274,7 +284,17 @@ img {
 .skillCard {
   max-width: 30vw;
 }
+
 .skillIconContainer {
+  transition: all 600ms;
+  /* display: inline-block; */
+  /* width: 20vw; */
+  /* background-color: blue; */
+}
+.skillIconContainer:hover {
+  fill: var(--secondColor);
+  transform: scale(1.1);
+  transition: all 600ms;
 }
 
 .skillTitle {
@@ -304,7 +324,7 @@ img {
   padding-top: var(--sectionPaddingTop);
   text-align: center;
   min-height: 500px;
-  max-height: 700px;
+  /* max-height: 700px; */
 }
 
 #aboutMeSection::after {
@@ -312,9 +332,11 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-image: url("Design/gheryTwo.jpg");
+  /* background-size: auto; */
+  background-size: 2000px;
   background-attachment: fixed;
   z-index: -1;
   filter: grayscale(100%);
@@ -395,7 +417,17 @@ img {
 #contactSection {
   text-align: center;
   padding-top: var(--sectionPaddingTop);
-  /* background-color: var(--forthColor); */
+  /* background-color: var(--thirdColor); */
+  background-color: var(--lightGrey);
+  color: black;
+}
+
+#contactSection a {
+  color: black;
+}
+
+#contactTitle {
+  margin-top: 1%;
 }
 
 #allFooterIcons {
@@ -407,10 +439,12 @@ img {
 
 .footerIconContainer {
   padding: 10px;
+  transition: all 1s;
 }
 
 .footerIconContainer:hover {
-  background-color: var(--primeColor);
+  background-color: var(--secondColor);
+  /* fill: var(--secondColor); */
   transform: scale(1.1);
   transition: all 1s;
 }
